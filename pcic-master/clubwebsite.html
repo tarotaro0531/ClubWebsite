@@ -17,6 +17,14 @@
             if ((event.altKey) && (event.keyCode == 17)) document.location.href = "https://www.pornhub.com/";
         };
     </script>
+	<script>
+		function openItem(ITEM){
+			document.getElementById("cadre").style.display = "none"; 
+			document.getElementById("Introduction").style.display = "none"; 
+			document.getElementById("Experience").style.display = "none"; 
+			document.getElementById(ITEM).style.display = "block"; 
+		}
+	</script>
     <style>
         .parallax {
             background-image: url("picture/img_parallax.jpg");
@@ -111,13 +119,13 @@
             <div class="ts stackable grid">
                 <div class="four wide column ts inverted segment" id="tabContainer">
                     <div class="ts tablet or large device only borderless flatted fluid secondary vertical menu" id="desktopTab">
-                        <a class="cadre item" data-tab="cadre" onclick="openCity(event, 'cadre')">
+                        <a class="cadre item" data-tab="cadre" onclick="openItem('cadre')">
                             <div style="color:#AAAAAA">幹部介紹</div>
                         </a>
-                        <a class="item" data-tab="class" onclick="openCity(event, 'Introduction')">
+                        <a class="item" data-tab="class" onclick="openItem('Introduction')">
                             <div style="color:#AAAAAA">課程介紹</div>
                         </a>
-                        <a class="item" data-tab="game" onclick="openCity(event, 'Experience')">
+                        <a class="item" data-tab="game" onclick="openItem('Experience')">
                             <div style="color:#AAAAAA">比賽心得</div>
                         </a>
                     </div>
